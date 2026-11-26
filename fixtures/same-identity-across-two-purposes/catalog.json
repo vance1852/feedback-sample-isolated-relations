@@ -1,0 +1,19 @@
+{
+  "case": "same-identity-across-two-purposes",
+  "files": {
+    "main": {
+      "sql": "main.sql",
+      "tables": {
+        "households": 1,
+        "people": 1,
+        "contacts": 1,
+        "contact_edges": 1,
+        "receipts": 1,
+        "policy_edges": 1,
+        "applications": 2
+      }
+    }
+  },
+  "event_count": 6,
+  "limits": {}
+}

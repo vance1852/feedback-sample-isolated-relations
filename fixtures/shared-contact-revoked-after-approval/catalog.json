@@ -1,0 +1,19 @@
+{
+  "case": "shared-contact-revoked-after-approval",
+  "files": {
+    "main": {
+      "sql": "main.sql",
+      "tables": {
+        "households": 3,
+        "people": 3,
+        "contacts": 3,
+        "contact_edges": 4,
+        "receipts": 3,
+        "policy_edges": 3,
+        "applications": 2
+      }
+    }
+  },
+  "event_count": 12,
+  "limits": {}
+}

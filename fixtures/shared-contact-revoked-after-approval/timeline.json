@@ -1,0 +1,114 @@
+[
+  {
+    "at": 1,
+    "action": "request",
+    "args": [
+      "r1",
+      "a1",
+      2,
+      [
+        "h1",
+        "h3"
+      ]
+    ]
+  },
+  {
+    "at": 2,
+    "action": "publish",
+    "args": [
+      "r1",
+      "r-old"
+    ]
+  },
+  {
+    "at": 3,
+    "action": "read",
+    "args": [
+      "r-old",
+      "sql-replay",
+      "households_with_contact"
+    ]
+  },
+  {
+    "at": 4,
+    "action": "request",
+    "args": [
+      "r2",
+      "a1",
+      3,
+      [
+        "h1"
+      ]
+    ]
+  },
+  {
+    "at": 5,
+    "action": "request",
+    "args": [
+      "r3",
+      "a2",
+      3,
+      [
+        "h1"
+      ]
+    ]
+  },
+  {
+    "at": 6,
+    "action": "source_change",
+    "args": [
+      "contacts",
+      "c1",
+      {
+        "private_value": "后补模拟值"
+      }
+    ]
+  },
+  {
+    "at": 7,
+    "action": "withdraw",
+    "args": [
+      "contact_id",
+      "c1"
+    ]
+  },
+  {
+    "at": 8,
+    "action": "continue",
+    "args": [
+      "r-old",
+      "sql-replay"
+    ]
+  },
+  {
+    "at": 9,
+    "action": "publish",
+    "args": [
+      "r2",
+      "candidate"
+    ]
+  },
+  {
+    "at": 10,
+    "action": "publish",
+    "args": [
+      "r3",
+      "candidate-other"
+    ]
+  },
+  {
+    "at": 11,
+    "action": "retry_request",
+    "args": [
+      "r2",
+      "a1"
+    ]
+  },
+  {
+    "at": 12,
+    "action": "review",
+    "args": [
+      "r-old"
+    ]
+  }
+]

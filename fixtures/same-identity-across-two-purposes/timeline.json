@@ -1,0 +1,62 @@
+[
+  {
+    "at": 2,
+    "action": "request",
+    "args": [
+      "r1",
+      "a1",
+      1,
+      [
+        "h1"
+      ]
+    ]
+  },
+  {
+    "at": 3,
+    "action": "publish",
+    "args": [
+      "r1",
+      "A"
+    ]
+  },
+  {
+    "at": 4,
+    "action": "request",
+    "args": [
+      "r2",
+      "a1",
+      1,
+      [
+        "h1"
+      ]
+    ]
+  },
+  {
+    "at": 5,
+    "action": "publish",
+    "args": [
+      "r2",
+      "B"
+    ]
+  },
+  {
+    "at": 6,
+    "action": "request",
+    "args": [
+      "r3",
+      "a2",
+      1,
+      [
+        "h1"
+      ]
+    ]
+  },
+  {
+    "at": 7,
+    "action": "publish",
+    "args": [
+      "r3",
+      "C"
+    ]
+  }
+]

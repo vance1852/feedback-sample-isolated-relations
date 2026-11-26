@@ -1,0 +1,17 @@
+BEGIN TRANSACTION;
+CREATE TABLE "applications" (approval TEXT PRIMARY KEY, purpose TEXT, district TEXT, stable_class TEXT, until INTEGER);
+INSERT INTO "applications" VALUES('a1','read','north','read-a',24);
+INSERT INTO "applications" VALUES('a2','cross-check','north','check-a',22);
+CREATE TABLE "contact_edges" (person_id TEXT, contact_id TEXT);
+INSERT INTO "contact_edges" VALUES('p1','c');
+CREATE TABLE "contacts" (contact_id TEXT PRIMARY KEY, district TEXT, category TEXT, private_value TEXT);
+INSERT INTO "contacts" VALUES('c','north','local','合成值');
+CREATE TABLE "households" (household_id TEXT PRIMARY KEY, district TEXT, label TEXT);
+INSERT INTO "households" VALUES('h1','north','模拟甲');
+CREATE TABLE "people" (person_id TEXT PRIMARY KEY, household_id TEXT, district TEXT);
+INSERT INTO "people" VALUES('p1','h1','north');
+CREATE TABLE "policy_edges" (content_kind TEXT PRIMARY KEY, mode TEXT, public_columns TEXT);
+INSERT INTO "policy_edges" VALUES('local','proxy','category');
+CREATE TABLE "receipts" (receipt_id TEXT PRIMARY KEY, household_id TEXT, amount INTEGER);
+INSERT INTO "receipts" VALUES('v','h1',300);
+COMMIT;
